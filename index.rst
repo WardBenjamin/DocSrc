@@ -3,20 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Copperforge Docs's documentation!
-============================================
+Welcome to the Copperforge documentation! For product-specific information, please see the following pages:
 
 .. toctree::
    :maxdepth: 2
    :caption: Products
 
-   docs/hardware/2A21_lasershark
-   docs/hardware/2C41_pac
+   hardware/2A21_lasershark
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Reference
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   software/libcu

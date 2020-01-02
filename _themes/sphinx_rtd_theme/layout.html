@@ -6,6 +6,9 @@
 {%- else %}
   {%- set titlesuffix = "" %}
 {%- endif %}
+{%- if title|striptags|e == '&lt;no title&gt;' %}
+  {%- set title = "Index" %}
+{%- endif %}
 {%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
 
 <!DOCTYPE html>
@@ -15,7 +18,7 @@
   {{ metatags }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% block htmltitle %}
-  <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+  <title>{{ title|striptags|e }} - Copperforge Docs</title>
   {% endblock %}
 
   {# FAVICON #}
@@ -198,11 +201,12 @@
             <div class="container">
                     <nav class="tabs-container">
                         <ul>
-                            <li class="home "><a href="http://copperforge.cc">Home</a></li>
+                            <li class="home "><a href="/">Home</a></li>
                             <li class="shop active"><a href="http://shop.copperforge.cc">Shop</a></li>
-                            <li class="docs"><a href="http://docs.copperforge.cc">Docs</a></li>
-                            <li class="discover"><a href="http://discover.copperforge.cc">Discover</a></li>
-                            <li class="blog "><a href="http://copperforge.cc">Blog</a></li>
+<!--                            <li class="docs"><a href="/docs">Docs</a></li>-->
+<!--                            <li class="discover"><a href="http://discover.copperforge.cc">Discover</a></li>-->
+                            <li class="blog "><a href="/blog">Blog</a></li>
+                            <li class="support "><a href="mailto:blward@copperforge.cc">Support</a></li>
                         </ul>
                     </nav>
                 </div>

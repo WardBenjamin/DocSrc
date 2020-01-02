@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Copperforge Docs'
-copyright = '2019 Copperforge LLC'
+copyright = '2020, Copperforge LLC'
 author = 'Benjamin Ward, Solomon Greenberg'
 
 
@@ -51,7 +51,7 @@ html_theme_path = ["_themes", ]
 
 html_theme_options = {
     # 'canonical_url': '',
-    # 'analytics_id': 'UA-XXXXXXX-1',  #  Provided by Google in your dashboard
+    'analytics_id': 'UA-127478728-1',  #  Provided by Google in your dashboard
     'logo_only': True,
     # 'display_version': True,
     # 'prev_next_buttons_location': 'bottom',

@@ -30,26 +30,22 @@ The Lasershark has three pins to connect, as seen in the image above: signal ("P
 
 The power and ground pins are used to power the sensor. The signal pin is the pin on which the PWM output signal is actually measured.
 
+Mechanical mounting
+^^^^^^^^^^^^^^^^^^^
 
+.. warning:: Do not mount directly to metal or other conductive surfaces, since the sensor could be damaged. Mount to a nonconductive material, or use plastic standoffs and fasteners.
 
-.. note:: Some simple sensors (such as :doc:`potentiometers <analog-potentiometers-hardware>`) may have interchangeable power and ground connections.
+As seen in the image above, the Lasershark mounts using a 1" by 1.25" bolt pattern, compatible with #6/M3 bolts or smaller.
 
-Most sensors that connect to analog input ports will have three wires - signal, power, and ground - corresponding precisely to the three pins of the analog input ports.  They should be connected accordingly.
+.. todo:: Add content about the PWM signal itself
 
-.. todo:: add picture
+Software
+--------
 
-Connecting a sensor to multiple analog input ports
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note:: For detailed information about LibCu, please see :ref:`libcu-header`.
 
-Some sensors may need to connect to multiple analog input ports in order to function.  In general, these sensors will only ever require a single power and a single ground pin - only the signal pin of the additional port(s) will be needed.
+Using LibCu, this sensor
 
-.. todo:: add picture
 
 .. |Lasershark Mechanical Drawing| image:: images/2A21_lasershark_mechanical.png
 .. |ground| unicode:: 0x23DA
-
-Footnotes
----------
-
-.. [1] A 12-bit resolution yields :math:`2^{12}`, or 4096 different values.  For a 5V range, that's an effective resolution of approximately 1.2 mV, or .0012V.  The actual accuracy specification is plus-or-minus 50mV, so the discretization is not the limiting factor in the measurement accuracy.
-.. [2] All power pins are actually connected to a single rail, as are all ground pins - there is no need to use the power/ground pins corresponding to a given signal pin.
