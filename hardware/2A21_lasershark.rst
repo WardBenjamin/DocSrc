@@ -33,18 +33,49 @@ The power and ground pins are used to power the sensor. The signal pin is the pi
 Mechanical mounting
 ^^^^^^^^^^^^^^^^^^^
 
-.. warning:: Do not mount directly to metal or other conductive surfaces, since the sensor could be damaged. Mount to a nonconductive material, or use plastic standoffs and fasteners.
+.. warning:: If mounting to conductive surfaces, use the supplied acrylic backplane to avoid any cross-conduction which may damage the sensor, or use plastic standoffs and fasteners.
 
-As seen in the image above, the Lasershark mounts using a 1" by 1.25" bolt pattern, compatible with #6/M3 bolts or smaller.
+As seen in the image above, the Lasershark mounts using a 1.25" by 1" bolt pattern, compatible with #6/M3 bolts or smaller.
 
 .. todo:: Add content about the PWM signal itself
 
 Software
 --------
 
-.. note:: For detailed information about LibCu, please see :ref:`libcu-header`.
+.. note:: For API documentation and detailed information about LibCu, please see :ref:`libcu-header`.
 
-Using LibCu, this sensor
+Using LibCu, this sensor is as simple as:
+
+.. tabs::
+
+   .. code-tab:: c++
+
+        namespace libcu
+        {
+        class Lasershark
+        {
+        public:
+            Lasershark(frc::DigitalSource &source);
+            Lasershark(frc::DigitalSource *source);
+            Lasershark(std::shared_ptr<frc::DigitalSource> source);
+
+            double GetDistanceFeet();
+            double GetDistanceInches();
+            double GetDistanceCentimeters();
+        };
+        } // namespace libcu
+
+   .. code-tab:: java
+
+        package com.cuforge.libcu;
+
+        public class Lasershark {
+            public Lasershark(DigitalSource source);
+
+            public double getDistanceFeet();
+            public double getDistanceInches();
+            public double getDistanceCentimeters();
+        }
 
 
 .. |Lasershark Mechanical Drawing| image:: images/2A21_lasershark_mechanical.png
