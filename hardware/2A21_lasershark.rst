@@ -7,6 +7,12 @@ Product ID: Cu//2A21
 
 The Lasershark 12ft Ranging Sensor is a state-of-the-art Time-of-Flight laser ranging sensor, which offers precise ranging up to 12ft in an easy-to-use form factor and interface. Onboard firmware allows students to interact with this complex sensor with only a standard 3-wire 0.1" pitch "PWM" cable and minimal programming.
 
+Files/Links
+-----------------
+
+- `Lasershark Cu//2A21 Product Flyer <https://drive.google.com/file/d/1KnewXr3yR99sqZ6ItXE7vhCQxA3aYXkP/view>`_
+- `Lasershark Shop Page <https://shop.copperforge.cc/products/2a21>`_
+
 Background
 ----------
 
@@ -44,39 +50,21 @@ Software
 
 .. note:: For API documentation and detailed information about LibCu, please see :ref:`libcu-header`.
 
-Using LibCu, this sensor is as simple as:
+Using LibCu, it takes just three lines of code to recieve data from the sensor:
 
 .. tabs::
 
-   .. code-tab:: c++
+    .. code-tab:: c++
 
-        namespace libcu
-        {
-        class Lasershark
-        {
-        public:
-            Lasershark(frc::DigitalSource &source);
-            Lasershark(frc::DigitalSource *source);
-            Lasershark(std::shared_ptr<frc::DigitalSource> source);
+        libcu::Lasershark * shark = new Lasershark(DigitalInput(0));
+        double distance = shark.GetDistanceInches();
 
-            double GetDistanceFeet();
-            double GetDistanceInches();
-            double GetDistanceCentimeters();
-        };
-        } // namespace libcu
+    .. code-tab:: java
 
-   .. code-tab:: java
+        Lasershark shark = new Lasershark(new DigitalInput(0));
+        double distance = shark.getDistanceInches();
 
-        package com.cuforge.libcu;
-
-        public class Lasershark {
-            public Lasershark(DigitalSource source);
-
-            public double getDistanceFeet();
-            public double getDistanceInches();
-            public double getDistanceCentimeters();
-        }
-
+Full API documentation is available on the LibCu resource page.
 
 .. |Lasershark Mechanical Drawing| image:: images/2A21_lasershark_mechanical.png
 .. |ground| unicode:: 0x23DA
