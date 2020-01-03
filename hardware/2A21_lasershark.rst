@@ -50,7 +50,7 @@ Software
 
 .. note:: For API documentation and detailed information about LibCu, please see :ref:`libcu-header`.
 
-Using LibCu, it takes just three lines of code to recieve data from the sensor:
+Using LibCu, it takes just two lines of code to receive data from the sensor:
 
 .. tabs::
 
