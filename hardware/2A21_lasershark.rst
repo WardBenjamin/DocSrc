@@ -56,12 +56,12 @@ Using LibCu, it takes just two lines of code to receive data from the sensor:
 
     .. code-tab:: c++
 
-        libcu::Lasershark * shark = new Lasershark(DigitalInput(0));
-        double distance = shark.GetDistanceInches();
+        libcu::Lasershark shark{0};
+        units::inch_t distance = shark.GetDistance();
 
     .. code-tab:: java
 
-        Lasershark shark = new Lasershark(new DigitalInput(0));
+        var shark = new Lasershark(0);
         double distance = shark.getDistanceInches();
 
 Full API documentation is available on the LibCu resource page.
