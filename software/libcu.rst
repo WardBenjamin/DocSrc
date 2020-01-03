@@ -3,7 +3,9 @@
 LibCu Software Library
 =================================
 
-LibCu is
+The LibCu C++/Java software library supports Copperforge devices including the Lasershark (Cu//2A21). Both online and offline installations are supported.
+
+LibCu follows WPILib/FRC vendor library standards and is compatible with WPILib 2020.+
 
 Installation
 ------------
@@ -21,12 +23,21 @@ If your development computer is connected to the internet, you should use the on
 #. Select Install new library (online).
 #. Enter the following installation URL and press Enter:
 
-    https://copperforge.cc/dev/maven/LibCu-latest.json
+    https://copperforge.cc/dev/files/vendordeps/LibCu-latest.json
 
 Offline Installation
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Download and unzip the latest LibCu C++/Java API into the ``C:\Users\Public\frc2020\`` directory.
+#. Download the `latest LibCu C++/Java API <https://copperforge.cc/dev/files/artifacts/LibCu_offline_latest.zip>`_ from the following URL:
+
+    https://copperforge.cc/dev/files/artifacts/LibCu_offline_latest.zip
+
+#. Download and unzip the file into the ``C:\Users\Public\wpilib\2020\`` directory:
+
+    ``C:\Users\Public\wpilib\2020\maven``
+
+    ``C:\Users\Public\wpilib\2020\vendordeps``
+
 #. Follow the offline installation instructions on `WPILib's FRC-Docs Adding an Offline-installed Library page <http://docs.wpilib.org/en/latest/docs/software/wpilib-overview/3rd-party-libraries.html#adding-an-offline-installed-library>`_.
 
 
