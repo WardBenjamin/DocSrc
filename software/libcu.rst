@@ -50,16 +50,16 @@ API Docs
 
         namespace libcu
         {
-        class Lasershark
+        class Lasershark : public frc::Sendable,
+                           public frc::SendableHelper<Lasershark>
         {
         public:
-            Lasershark(frc::DigitalSource &source);
-            Lasershark(frc::DigitalSource *source);
-            Lasershark(std::shared_ptr<frc::DigitalSource> source);
+            explicit Lasershark(int input);
+            explicit Lasershark(frc::DigitalSource &source);
+            explicit Lasershark(frc::DigitalSource *source);
+            explicit Lasershark(std::shared_ptr<frc::DigitalSource> source);
 
-            double GetDistanceFeet();
-            double GetDistanceInches();
-            double GetDistanceCentimeters();
+            units::foot_t GetDistance();
         };
         } // namespace libcu
 
