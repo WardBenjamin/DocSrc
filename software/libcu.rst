@@ -48,6 +48,8 @@ API Docs
 
    .. code-tab:: c++
 
+        namespace libcu
+        {
         class Lasershark : public frc::Sendable,
                            public frc::SendableHelper<Lasershark>
         {
@@ -88,6 +90,8 @@ API Docs
         } // namespace libcu
 
    .. code-tab:: java
+
+        package com.cuforge.libcu;
 
         public class Lasershark implements Sendable {
 
