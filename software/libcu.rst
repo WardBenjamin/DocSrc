@@ -48,29 +48,80 @@ API Docs
 
    .. code-tab:: c++
 
-        namespace libcu
-        {
         class Lasershark : public frc::Sendable,
                            public frc::SendableHelper<Lasershark>
         {
         public:
-            explicit Lasershark(int input);
+            /**
+             * Construct a new Lasershark on a given digital input channel.
+             *
+             * @param channel The channel to which to attach.
+             */
+            explicit Lasershark(int channel);
+
+            /**
+             * Construct a new Lasershark attached to a DigitalSource object.
+             *
+             * @param source The digital source to which to attach.
+             */
             explicit Lasershark(frc::DigitalSource &source);
+
+            /**
+             * Construct a new Lasershark attached to a DigitalSource object.
+             *
+             * @param source The digital source to which to attach.
+             */
             explicit Lasershark(frc::DigitalSource *source);
+
+            /**
+             * Construct a new Lasershark attached to a DigitalSource object.
+             *
+             * @param source The digital source to which to attach.
+             */
             explicit Lasershark(std::shared_ptr<frc::DigitalSource> source);
 
+            /**
+             * Get the distance reported by the LiDAR sensor. See WPILib Units library guide.
+             */
             units::foot_t GetDistance();
         };
         } // namespace libcu
 
    .. code-tab:: java
 
-        package com.cuforge.libcu;
+        public class Lasershark implements Sendable {
 
-        public class Lasershark {
+            /**
+             * Construct a new Lasershark on a given digital input channel.
+             *
+             * @param channel The channel to which to attach.
+             */
+            public Lasershark(int channel);
+
+            /**
+             * Construct a new Lasershark attached to a DigitalSource object.
+             *
+             * @param source The digital source to which to attach.
+             */
             public Lasershark(DigitalSource source);
 
+            /**
+             * Get the distance reported by the LiDAR sensor in feet.
+             */
             public double getDistanceFeet();
+
+            /**
+             * Get the distance reported by the LiDAR sensor in inches.
+             */
             public double getDistanceInches();
+
+            /**
+             * Get the distance reported by the LiDAR sensor in centimeters.
+             */
             public double getDistanceCentimeters();
+
+            /**
+             * Get the distance reported by the LiDAR sensor in meters.
+             */
+            public double getDistanceMeters();
         }
