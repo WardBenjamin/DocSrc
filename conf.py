@@ -34,7 +34,8 @@ extensions = [
 master_doc = "index"
 
 # Only one langauge supported, no URL prefix
-notfound_no_urls_prefix = True
+# This is only needed when deploying a non-RTD server
+# notfound_no_urls_prefix = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
