@@ -38,9 +38,9 @@ master_doc = "index"
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 if on_rtd:
-   notfound_no_urls_prefix = True
-else:
    notfound_no_urls_prefix = False
+else:
+   notfound_no_urls_prefix = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
