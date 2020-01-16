@@ -35,7 +35,12 @@ master_doc = "index"
 
 # Only one langauge supported, no URL prefix
 # This is only needed when deploying a non-RTD server
-# notfound_no_urls_prefix = True
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+
+if on_rtd:
+   notfound_no_urls_prefix = True
+else:
+   notfound_no_urls_prefix = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
