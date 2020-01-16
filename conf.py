@@ -31,6 +31,8 @@ extensions = [
     'sphinx_tabs.tabs', 'sphinx_sitemap', 'notfound.extension'
 ]
 
+master_doc = "index"
+
 # Only one langauge supported, no URL prefix
 notfound_no_urls_prefix = True
 
