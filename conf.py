@@ -31,6 +31,9 @@ extensions = [
     'sphinx_tabs.tabs', 'sphinx_sitemap', 'notfound.extension'
 ]
 
+# Only one langauge supported, no URL prefix
+notfound_no_urls_prefix = True
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
