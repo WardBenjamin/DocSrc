@@ -23,14 +23,14 @@ If your development computer is connected to the internet, you should use the on
 #. Select Install new library (online).
 #. Enter the following installation URL and press Enter:
 
-    https://copperforge.cc/dev/files/vendordeps/LibCu-latest.json
+    https://copperforge.cc/files/dev/vendordeps/LibCu-latest.json
 
 Offline Installation
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Download the `latest LibCu C++/Java API <https://copperforge.cc/dev/files/artifacts/LibCu_offline_latest.zip>`_ from the following URL:
+#. Download the `latest LibCu C++/Java API <https://copperforge.cc/files/dev/artifacts/LibCu_offline_latest.zip>`_ from the following URL:
 
-    https://copperforge.cc/dev/files/artifacts/LibCu_offline_latest.zip
+    https://copperforge.cc/files/dev/artifacts/LibCu_offline_latest.zip
 
 #. Download and unzip the file into the ``C:\Users\Public\wpilib\2020\`` directory:
 
