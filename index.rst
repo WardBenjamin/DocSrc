@@ -5,6 +5,8 @@
 
 Welcome to the Copperforge documentation! For product-specific information, please see the following pages:
 
+solomon test
+
 .. toctree::
    :maxdepth: 2
    :caption: Products
