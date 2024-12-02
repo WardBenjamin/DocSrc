@@ -10,7 +10,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -28,8 +28,19 @@ author = 'Benjamin Ward, Solomon Greenberg'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx_tabs.tabs', 'sphinx_sitemap'
+    'sphinx_tabs.tabs', 'sphinx_sitemap', 'notfound.extension'
 ]
+
+master_doc = "index"
+
+# Only one langauge supported, no URL prefix
+# This is only needed when deploying a non-RTD server
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+
+if on_rtd:
+   notfound_no_urls_prefix = False
+else:
+   notfound_no_urls_prefix = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
